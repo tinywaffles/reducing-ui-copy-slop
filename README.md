@@ -18,13 +18,15 @@ gh skill install tinywaffles/reducing-ui-copy-slop reducing-ui-copy-slop --agent
 
 Remove `--scope user` to install into the current project. For a manual install, copy `reducing-ui-copy-slop/` into `~/.agents/skills/` for Codex or `~/.claude/skills/` for Claude Code.
 
-## Use
+## Example
 
-```text
-Use $reducing-ui-copy-slop to audit the copy in this interface.
-```
+Given a `Backups` heading and a `Backup schedule` control set to `Every 6 hours`:
 
-The skill asks whether each string performs a unique job, then returns **Keep**, **Shorten**, or **Delete**. It also prevents copy work from quietly inventing product behavior just to make a UI feel more complete.
+| Current copy | Decision | Final copy | Unique job |
+| --- | --- | --- | --- |
+| Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — | None; promotional repetition. |
+| Create a new backup now | Shorten | Create backup | Names the outcome. |
+| Your backup was successfully created and is now safely stored. | Shorten | Backup created. | Confirms completion without an unverified safety claim. |
 
 ## Design basis
 
