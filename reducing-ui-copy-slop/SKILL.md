@@ -8,25 +8,26 @@ license: MIT
 
 ## Rule
 
-Use the shortest wording that keeps the meaning and context. Keep a string only if it adds information not shown by the layout, label, value, control, state, or nearby text. Cover required elements; do not add plausible ones.
+Use the shortest wording that keeps meaning. Count layout, labels, values, controls, state, and nearby text as information. Keep domain terms unless context makes them redundant. Ignore punctuation-only edits unless asked. Cover required elements; add no plausible ones.
 
 ## Scope
 
-Read the brief, component, interaction, and nearby copy. Separate facts from assumptions. Requests for *polished*, *premium*, *friendly*, *helpful*, or *finished* UI do not authorize extra UI.
+Read the brief, component, interaction, and nearby copy. Separate facts from assumptions. *Polished*, *premium*, *friendly*, *helpful*, or *finished* UI does not authorize extra UI.
 
-Do not invent controls, states, metrics, progress, guarantees, confirmations, tooltips, or behavior. If a missing fact blocks accurate copy, list only it under `Open product facts`. Otherwise proceed without guessing.
+Do not invent controls, states, metrics, progress, guarantees, confirmations, tooltips, or behavior. Specific claims require verified behavior. List `Open product facts` only when a missing fact blocks accurate copy.
 
 ## Decide
 
-Each string must identify an object or state, name an outcome, state a constraint or consequence, explain recovery, give required instruction, or provide an accessible name.
+Each string must identify an object or state, name an outcome, state a constraint or consequence, explain recovery, instruct, or provide an accessible name.
 
-- **Delete** if it has no unique job or repeats stronger nearby copy.
-- **Shorten** if its job is needed but the wording is indirect or padded.
-- **Keep** if removal would hurt understanding, recovery, safety, or accessibility.
+- **Delete** if it has no unique job or repeats nearby copy.
+- **Shorten** by deleting padding.
+- **Rewrite** unclear or misleading copy using verified facts only.
+- **Keep** if removal harms understanding, recovery, safety, or accessibility.
 
-Return a compact audit with source copy, decision, and result. Fit labels and layout to the task; never force a schema. Cut preambles, summaries, and routine reasons. Explain only when asked or to preserve safety, recovery, or accessibility. Apply file edits when requested.
+Audit changed copy only. Each unique finding contains only original copy, decision, and final copy; add location solely when identical strings need different decisions. Fit labels and layout to the task; omit preambles, summaries, and routine reasons. Apply requested file edits.
 
-Use this for docs examples too. Drop setup or reasons that only justify **Delete** or **Shorten**, including nearby headings, controls, or values. Keep stated consequences and safety facts; labels do not replace them. Keep other context only to avoid a misleading result. Never show agent or implementation reasoning as UI copy.
+For docs examples, remove setup or reasons that only justify **Delete** or **Shorten**, including nearby headings, controls, or values. Keep stated consequences, safety facts, and context needed to avoid a misleading result. Never put agent or implementation reasoning in UI copy.
 
 ## Quick Reference
 
@@ -47,6 +48,7 @@ Use this for docs examples too. Drop setup or reasons that only justify **Delete
 | --- | --- | --- |
 | Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |
+| Changed entries | Rewrite | Changes |
 | Your backup was successfully created and is now safely stored. | Shorten | Backup created. |
 
 ## Avoid
@@ -54,10 +56,9 @@ Use this for docs examples too. Drop setup or reasons that only justify **Delete
 - Rewriting copy that should be deleted.
 - Treating “all copy” as all possible states or a word list as proof of slop.
 - Removing safety, recovery, disabled reasons, or accessible names.
-- Adding reassurance, assumptions, internal reasoning, or unspecified behavior.
-- Lengthening context-clear actions or varying terms for style.
+- Adding reassurance, assumptions, internal reasoning, or style-only rewrites.
 - Editing unrelated documentation.
 
 ## Check
 
-Check the requested format, one verified job per string, safe deletions, and blocking `Open product facts` only. If the UI is available, test realistic width, dynamic values, and accessible names. Keep scope.
+Check format, one verified job per string, and safe deletions. Drop unchanged rows. If **Shorten** changes words or their order, mark **Rewrite**. Audits show **Delete**, **Shorten**, and **Rewrite**; show **Keep** only when asked for unchanged copy, repeating it. With UI, test real width, dynamic values, and accessible names. Keep scope.
