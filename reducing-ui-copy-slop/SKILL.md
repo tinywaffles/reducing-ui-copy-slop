@@ -1,6 +1,6 @@
 ---
 name: reducing-ui-copy-slop
-description: Use when creating, reviewing, or editing user-visible interface copy that feels verbose, repetitive, promotional, vague, overly reassuring, or AI-generated, including labels, helper text, buttons, dialogs, empty states, errors, and success messages.
+description: Removes unnecessary user-visible product interface copy while preserving meaning, actionability, safety, recovery, and accessibility. Use when creating, reviewing, or editing UI labels, helper text, buttons, dialogs, empty states, errors, or success messages that feel verbose, repetitive, promotional, vague, overly reassuring, or AI-generated; not for marketing or long-form prose.
 license: MIT
 ---
 
