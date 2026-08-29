@@ -20,13 +20,11 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 ## Example
 
-Given a `Backups` heading and a `Backup schedule` control set to `Every 6 hours`:
-
-| Current copy | Decision | Final copy | Unique job |
-| --- | --- | --- | --- |
-| Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — | None; promotional repetition. |
-| Create a new backup now | Shorten | Create backup | Names the outcome. |
-| Your backup was successfully created and is now safely stored. | Shorten | Backup created. | Confirms completion without an unverified safety claim. |
+| Example | What | Result |
+| --- | --- | --- |
+| Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
+| Create a new backup now | Shorten | Create backup |
+| Your backup was successfully created and is now safely stored. | Shorten | Backup created. |
 
 ## Design basis
 

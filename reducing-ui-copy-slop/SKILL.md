@@ -26,7 +26,7 @@ Use this decision contract:
 - **Shorten** when its job is necessary but the wording is indirect or padded.
 - **Keep** when removing it would reduce understanding, actionability, recovery, safety, or accessibility.
 
-For new UI, return `Element | Copy | Unique job` for explicitly specified elements and states only. For an audit, return `Location | Decision | Final copy | Unique job`. Do not add another section after these tables except `Open product facts` when needed.
+For new UI, return `Element | Copy` for explicitly specified elements and states only. For an audit, return `Example | What | Result`. Keep the reasoning internal unless the user asks for it. Do not add another section after these tables except `Open product facts` when needed.
 
 ## Quick Reference
 
@@ -34,7 +34,7 @@ For new UI, return `Element | Copy | Unique job` for explicitly specified elemen
 | --- | --- |
 | Button | Name the outcome with a direct verb and object. |
 | Helper | Add a constraint, consequence, format, or non-obvious example. |
-| Success | Confirm the outcome; add a next consequence only when it changes what the user should do. |
+| Success | State the outcome once. Remove “successfully,” reassurance, and internal reasoning such as “safely stored.” |
 | Error | Say what failed and what to do next; include a cause only when known and useful. |
 | Empty state | Distinguish why it is empty and offer the next useful action. |
 | Destructive action | Name the object and preserve the irreversible consequence. |
@@ -42,13 +42,11 @@ For new UI, return `Element | Copy | Unique job` for explicitly specified elemen
 
 ## Example
 
-Given a `Backups` heading and a `Backup schedule` control set to `Every 6 hours`:
-
-| Current copy | Decision | Final copy | Unique job |
-| --- | --- | --- | --- |
-| Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — | None; promotional repetition. |
-| Create a new backup now | Shorten | Create backup | Names the outcome. |
-| Your backup was successfully created and is now safely stored. | Shorten | Backup created. | Confirms completion without an unverified safety claim. |
+| Example | What | Result |
+| --- | --- | --- |
+| Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
+| Create a new backup now | Shorten | Create backup |
+| Your backup was successfully created and is now safely stored. | Shorten | Backup created. |
 
 ## Common Mistakes
 
@@ -56,6 +54,7 @@ Given a `Backups` heading and a `Backup schedule` control set to `Every 6 hours`
 - Treating “all copy” as “all possible states” instead of all specified states.
 - Treating suspicious words as proof; word lists are signals only.
 - Removing safety, recovery, disabled reasons, or accessible names.
+- Treating reassurance or internal reasoning as UI copy.
 - Inventing behavior, guarantees, or states while trying to help.
 - Varying established terms for style.
 
