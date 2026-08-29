@@ -24,9 +24,9 @@ Each string must identify an object or state, name an outcome, state a constrain
 - **Shorten** if its job is needed but the wording is indirect or padded.
 - **Keep** if removal would hurt understanding, recovery, safety, or accessibility.
 
-Follow the user's requested format. Otherwise choose the smallest useful output: direct edits for files, a short list for a few strings, or a table for repeated comparisons. `Example | What | Result` is an option, not a requirement.
+Return a compact audit with source copy, decision, and result. Fit labels and layout to the task; never force a schema. Cut preambles, summaries, and routine reasons. Explain only when asked or to preserve safety, recovery, or accessibility. Apply file edits when requested.
 
-For docs examples, drop setup or rationale used only to justify **Delete** or **Shorten**, including nearby headings, controls, or values. Keep stated consequences and safety facts; an action label does not replace them. Keep other context only if its loss misleads or removes a point missing from before and result. Never show agent or implementation reasoning as UI copy.
+Use this for docs examples too. Drop setup or reasons that only justify **Delete** or **Shorten**, including nearby headings, controls, or values. Keep stated consequences and safety facts; labels do not replace them. Keep other context only to avoid a misleading result. Never show agent or implementation reasoning as UI copy.
 
 ## Quick Reference
 
@@ -43,7 +43,7 @@ For docs examples, drop setup or rationale used only to justify **Delete** or **
 
 ## Example
 
-| Example | What | Result |
+| Example | Type | Result |
 | --- | --- | --- |
 | Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |
