@@ -24,13 +24,9 @@ Each string must identify an object or state, name an outcome, state a constrain
 - **Shorten** if its job is needed but the wording is indirect or padded.
 - **Keep** if removal would hurt understanding, recovery, safety, or accessibility.
 
-Follow the user's requested format. If none is given:
+Follow the user's requested format. Otherwise choose the smallest useful output: direct edits for files, a short list for a few strings, or a table for repeated comparisons. `Example | What | Result` is an option, not a requirement.
 
-- New UI: `Element | Copy` for specified elements and states only.
-- Audit: `Example | What | Result`.
-- File edit: apply the changes directly.
-
-Without a user-set format, rewrite docs examples as exactly `Example | What | Result`. Drop setup or rationale used only to justify **Delete** or **Shorten**, including nearby headings, controls, or values. Keep stated consequences and safety facts outside the table; an action label does not replace them. Keep other context only if its loss misleads or removes a point missing from before and result. Never show agent or implementation reasoning as UI copy.
+For docs examples, drop setup or rationale used only to justify **Delete** or **Shorten**, including nearby headings, controls, or values. Keep stated consequences and safety facts; an action label does not replace them. Keep other context only if its loss misleads or removes a point missing from before and result. Never show agent or implementation reasoning as UI copy.
 
 ## Quick Reference
 
