@@ -29,7 +29,7 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 ## Design basis
 
-The structure follows the [Agent Skills specification](https://agentskills.io/specification), [OpenAI skill-authoring guidance](https://learn.chatgpt.com/docs/build-skills), and [Anthropic's skill-authoring guidance](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices). Its copy decisions draw from Impeccable's [Clarify](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/reference/clarify.md) and [Distill](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/reference/distill.md) approaches, narrowed specifically to UI copy.
+Built to the [Agent Skills specification](https://agentskills.io/specification), [OpenAI](https://learn.chatgpt.com/docs/build-skills), and [Anthropic](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) authoring guidance. Copy rules adapt Apple’s [Writing](https://developer.apple.com/design/human-interface-guidelines/writing), Impeccable’s [Clarify](https://github.com/pbakaus/impeccable/blob/main/skill/reference/clarify.md) and [Distill](https://github.com/pbakaus/impeccable/blob/main/skill/reference/distill.md), and Hallmark’s [copy guidance](https://github.com/Nutlope/hallmark/blob/main/skills/hallmark/references/copy.md) for product UI.
 
 ## License
 
