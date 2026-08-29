@@ -36,7 +36,7 @@ For docs examples, remove setup or reasons that only justify **Delete** or **Sho
 | Button | Name the outcome. Add the object only if context is unclear or confirmation needs precision. |
 | Helper | Add only a constraint, consequence, format, or non-obvious example. |
 | Success | State the outcome once. Cut reassurance and internal claims such as “safely stored”; keep needed verified safety facts. |
-| Error | State the failure. Add recovery only if it exists; add a cause only if known and useful. |
+| Error | Delete failure repeated by nearby state. Otherwise use `Failed to [action]` when context supplies the object; add only a known useful cause or existing recovery. |
 | Empty state | State the empty condition. Add a known reason or existing action only if useful. |
 | Destructive action | Name the object and keep the irreversible consequence. |
 | Disabled control | Keep an existing availability reason when needed. |
@@ -48,7 +48,7 @@ For docs examples, remove setup or reasons that only justify **Delete** or **Sho
 | --- | --- | --- |
 | Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |
-| Changed entries | Rewrite | Changes |
+| The document could not be saved. | Rewrite | Failed to save. |
 | Your backup was successfully created and is now safely stored. | Shorten | Backup created. |
 
 ## Avoid

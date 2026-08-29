@@ -24,6 +24,7 @@ Remove `--scope user` to install into the current project. For a manual install,
 | --- | --- | --- |
 | Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |
+| The document could not be saved. | Rewrite | Failed to save. |
 | Your backup was successfully created and is now safely stored. | Shorten | Backup created. |
 
 ## Design basis
