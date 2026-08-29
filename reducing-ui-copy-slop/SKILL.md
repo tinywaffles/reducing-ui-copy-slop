@@ -1,6 +1,6 @@
 ---
 name: reducing-ui-copy-slop
-description: Removes unnecessary user-visible product interface copy while preserving meaning, actionability, safety, recovery, and accessibility. Use when creating, reviewing, or editing UI labels, helper text, buttons, dialogs, empty states, errors, or success messages that feel verbose, repetitive, promotional, vague, overly reassuring, or AI-generated; not for marketing or long-form prose.
+description: Removes unnecessary user-visible product interface copy while preserving meaning, actionability, safety, recovery, and accessibility. Use when creating, reviewing, or editing UI labels, helper text, buttons, dialogs, empty states, errors, success messages, or documentation examples that demonstrate such copy and feel verbose, repetitive, promotional, vague, overly reassuring, or AI-generated; not for marketing or unrelated long-form prose.
 license: MIT
 ---
 
@@ -26,7 +26,7 @@ Use this decision contract:
 - **Shorten** when its job is necessary but the wording is indirect or padded.
 - **Keep** when removing it would reduce understanding, actionability, recovery, safety, or accessibility.
 
-For new UI, return `Element | Copy` for explicitly specified elements and states only. For an audit, return `Example | What | Result`. Keep the reasoning internal unless the user asks for it. Do not add another section after these tables except `Open product facts` when needed.
+For new UI, return `Element | Copy` for explicitly specified elements and states only. For an audit, return `Example | What | Result`. When auditing documentation that demonstrates UI copy, limit the edit to the example presentation. Use a self-contained `Example | What | Result` table without setup text or rationale columns. Keep the reasoning internal unless the user asks for it. Do not add another section after these tables except `Open product facts` when needed.
 
 ## Quick Reference
 
@@ -39,6 +39,7 @@ For new UI, return `Element | Copy` for explicitly specified elements and states
 | Empty state | Distinguish why it is empty and offer the next useful action. |
 | Destructive action | Name the object and preserve the irreversible consequence. |
 | Disabled or icon-only control | Preserve the availability reason and accessible name. |
+| Documentation example | Use a self-contained table with Example, What, and Result columns; omit setup text and rationale columns. |
 
 ## Example
 
@@ -56,6 +57,7 @@ For new UI, return `Element | Copy` for explicitly specified elements and states
 - Removing safety, recovery, disabled reasons, or accessible names.
 - Treating reassurance or internal reasoning as UI copy.
 - Inventing behavior, guarantees, or states while trying to help.
+- Rewriting unrelated documentation when only its UI-copy example is in scope.
 - Varying established terms for style.
 
 ## Verify
