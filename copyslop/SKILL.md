@@ -8,7 +8,7 @@ license: MIT
 
 ## Rule
 
-Use the shortest wording that keeps meaning. Review each string with nearby UI and its interaction. Each string must name an object or state, or communicate an outcome, constraint, consequence, recovery, instruction, or accessible name. Labels name the changed property and fit its values. Preserve product names and the actors or surfaces needed to know what affects what, plus material timing, trigger, scope, ownership, behavior, safety, recovery, and accessibility. Change facts only from a source of truth. Keep clear copy; ignore punctuation-only edits unless asked. Invent nothing.
+Use the shortest wording that keeps meaning. Review each string with nearby UI and its interaction. Each string must name an object or state, or communicate an outcome, constraint, consequence, recovery, instruction, or accessible name. Setting labels name the specific property their values change, not the broader feature. Preserve product names and the actors or surfaces needed to know what affects what, plus material timing, trigger, scope, ownership, behavior, safety, recovery, and accessibility. Change facts only from a source of truth. Keep clear copy; ignore punctuation-only edits unless asked. Invent nothing.
 
 ## Scope
 
