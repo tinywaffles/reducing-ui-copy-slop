@@ -8,7 +8,7 @@ license: MIT
 
 ## Rule
 
-Use the shortest wording that keeps meaning. Review each string with nearby UI and its interaction. Each string must name an object or state, or communicate an outcome, constraint, consequence, recovery, instruction, or accessible name. Labels name the changed property and fit its values. Preserve product names and material timing, trigger, scope, ownership, behavior, safety, recovery, and accessibility. Change facts only from a source of truth. Keep clear copy; ignore punctuation-only edits unless asked. Invent nothing.
+Use the shortest wording that keeps meaning. Review each string with nearby UI and its interaction. Each string must name an object or state, or communicate an outcome, constraint, consequence, recovery, instruction, or accessible name. Labels name the changed property and fit its values. Preserve product names and the actors or surfaces needed to know what affects what, plus material timing, trigger, scope, ownership, behavior, safety, recovery, and accessibility. Change facts only from a source of truth. Keep clear copy; ignore punctuation-only edits unless asked. Invent nothing.
 
 ## Scope
 
@@ -25,7 +25,7 @@ Audit only requested surfaces, one at a time. Do not infer findings from uninspe
 - **Rewrite** unclear or misleading copy using verified facts only.
 - **Keep** if removal harms understanding, recovery, safety, or accessibility.
 
-Before changing a helper, find facts absent nearby. Move its sole fact into a natural label only if clarity remains; otherwise keep it. Do not rename a clear label just to remove a helper. Replace internal terms with user-facing categories. Drop provenance and implied qualities; keep material qualifiers. Use plain verbs.
+Before changing a helper, find facts absent nearby. Move its sole fact into a natural label only if clarity remains; otherwise keep it. Do not rename a clear label just to remove a helper. Replace internal terms with user-facing categories only when the object and scope stay the same. Drop provenance and implied qualities; keep material qualifiers. Use plain verbs.
 
 Return only a `Previous | Decision | Output` table of changed strings. Add `Location` only when identical `Previous` strings need different results. Each row contains one string; `Previous` and `Output` contain exact UI text only. `Decision` is **Delete**, **Shorten**, or **Rewrite**; include **Keep** only when asked. Use `—` for deletion. Add no ranking or rationale. If nothing changes, return `No copy changes.` A read-only audit changes no files; otherwise apply only requested edits.
 
@@ -36,8 +36,9 @@ Remove reassurance, implementation details, unaffected-surface notes, and absent
 | Element | Rule |
 | --- | --- |
 | Button | Name the outcome. Add the object only for context or confirmation. |
-| Input | Keep a label or accessible name. An existing input prompt may be shortened or rewritten, not deleted. Keep other hints only if they add expected content or format. |
+| Input | Keep a label or accessible name. Preserve the instruction in an existing input prompt; shorten or rewrite it, but do not reduce it to a field name. Keep other hints only if they add expected content or format. |
 | Helper | Keep only a constraint, consequence, format, trigger, or useful example absent nearby. |
+| Status | Keep a changing state unless the same state is visible nearby. |
 | Success | State the outcome once. Cut reassurance and internal claims such as “safely stored”; keep safety facts. |
 | Error | Delete failure already stated nearby. Otherwise state what failed naturally. Keep a code only when it helps the user, support, or recovery; never make it primary. Add only a known useful cause or existing recovery. |
 | Empty state | State the condition. Add a known reason or action only if useful. |
@@ -55,4 +56,4 @@ Remove reassurance, implementation details, unaffected-surface notes, and absent
 
 ## Check
 
-Compare source and result. Preserve material objects, qualifiers, triggers, automation, thresholds, safety, recovery, disabled reasons, and accessible names unless verified context corrects them. **Shorten** only deletes words; substitution or reordering is **Rewrite**. Drop unchanged rows. Check width, dynamic values, and accessible names. Keep scope.
+Compare source and result. Preserve material actors, objects, surfaces, qualifiers, triggers, automation, thresholds, safety, recovery, disabled reasons, and accessible names unless verified context corrects them. **Shorten** only deletes words; substitution or reordering is **Rewrite**. Drop unchanged rows. Check width, dynamic values, and accessible names. Keep scope.
