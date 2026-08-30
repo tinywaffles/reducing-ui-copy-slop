@@ -31,7 +31,7 @@ Before changing a helper, identify its unique facts. Move its only attribute int
 
 Report only copy that changes. Treat findings as changed strings, not a ranked code review. Read-only means do not edit files; it does not change the report. Use `Previous`, `Decision`, and `Output`. Add `Location` only when identical `Previous` text needs a different decision or output. Put one string in each row. `Previous` and `Output` contain only the exact UI text in question, including placeholders when needed; put no context, explanation, or rationale in either. `Decision` contains only **Delete**, **Shorten**, or **Rewrite**; include **Keep** only when requested. Use `—` for deleted output. Omit preambles, summaries, priorities, and routine reasons. Apply requested edits.
 
-Delete reassurance, implementation boundaries, unaffected-surface notes, and absent-control explanations unless needed for a decision, safety, recovery, or action. Absence alone needs no explanation. In docs examples, cut setup or reasons that only justify **Delete** or **Shorten**. Keep needed context; keep agent reasoning out of UI copy.
+Delete reassurance, implementation-detail copy, unaffected-surface notes, and absent-control explanations. Keep boundary-related copy when it changes a user's decision, permission, risk, expectation, recovery, or safe action. A copy edit never changes or weakens the underlying implementation boundary. Absence alone needs no explanation. In docs examples, cut setup or reasons that only justify **Delete** or **Shorten**. Keep needed context; keep agent reasoning out of UI copy.
 
 ## Quick Reference
 
