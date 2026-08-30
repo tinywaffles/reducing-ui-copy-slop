@@ -8,7 +8,7 @@ license: MIT
 
 ## Rule
 
-Use the shortest wording that keeps meaning. Prefer concrete states and outcomes to narration. Keep labels grammatical with their values and use one term per concept. Treat layout, controls, state, and nearby copy as context. Keep domain terms unless redundant. Ignore punctuation-only edits unless asked. Invent nothing.
+Use the shortest wording that keeps meaning. Audit each label, value, control, helper, and state together. Prefer concrete states and outcomes. Labels name adjustable concepts and fit their values. Object-only labels need the varying attribute; property labels do not. Keep a concise helper when it defines the property's effect. Preserve explicit product names and material lifecycle, timing, trigger, scope, ownership, or behavior qualifiers. Change a product name only with direct source-of-truth evidence, never to a related interface. Use nearby UI as context. Ignore punctuation-only edits unless asked. Invent nothing.
 
 ## Scope
 
@@ -25,16 +25,18 @@ Each string must identify an object or state, or communicate an outcome, constra
 - **Rewrite** unclear or misleading copy using verified facts only.
 - **Keep** if removal harms understanding, recovery, safety, or accessibility.
 
+Before changing a helper, identify its unique facts. Move its only attribute into a natural label. Otherwise keep those facts. Never rename a clear label just to delete a brief helper. Replace implementation terms with user-facing categories; drop provenance and implied qualities, but keep material qualifiers. Use accurate plain verbs.
+
 Audit changed copy only. Each finding has original copy, decision, and result; add location only when identical strings differ. Adapt labels to the task. Omit preambles, summaries, and routine reasons. Apply requested edits.
 
-In docs examples, cut setup or reasons that only justify **Delete** or **Shorten**. Keep consequences, safety facts, and context needed for accuracy. Keep agent and implementation reasoning out of UI copy.
+Delete reassurance, implementation boundaries, unaffected-surface notes, and absent-control explanations unless needed for a decision, safety, recovery, or action. Absence alone needs no explanation. In docs examples, cut setup or reasons that only justify **Delete** or **Shorten**. Keep needed context; keep agent reasoning out of UI copy.
 
 ## Quick Reference
 
 | Element | Rule |
 | --- | --- |
 | Button | Name the outcome. Add the object only for context or precise confirmation. |
-| Helper | Add only a constraint, consequence, format, or useful example. |
+| Helper | Keep only a constraint, consequence, format, trigger, or useful example not carried by the label, value, control, or state. |
 | Success | State the outcome once. Cut reassurance and internal claims such as “safely stored”; keep needed safety facts. |
 | Error | Delete failure already stated nearby. Otherwise state what failed naturally. Keep a code only when it helps the user, support, or recovery; never make it the primary message. Add only a known useful cause or existing recovery. |
 | Empty state | State the condition. Add a known reason or existing action only if useful. |
@@ -61,4 +63,4 @@ In docs examples, cut setup or reasons that only justify **Delete** or **Shorten
 
 ## Check
 
-Check format, one verified job per string, and safe deletions. Drop unchanged rows. Mark word or order changes **Rewrite**, not **Shorten**. Show **Keep** only when requested, repeating the copy. With UI, test width, dynamic values, and accessible names. Keep scope.
+Check format, one verified job per string, and safe deletions. Compare source and result; preserve every material object, qualifier, trigger, automation, and threshold rule unless verified context corrects it. Drop unchanged rows. Mark word or order changes **Rewrite**, not **Shorten**. Show **Keep** only when requested, repeating the copy. With UI, test width, dynamic values, and accessible names. Keep scope.
