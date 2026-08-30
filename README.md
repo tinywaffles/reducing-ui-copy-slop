@@ -1,6 +1,6 @@
 # Reducing UI Copy Slop
 
-An Agent Skill for removing verbose, repetitive, promotional, and speculative interface copy while preserving useful guidance, safety, recovery, and accessibility.
+An Agent Skill for reviewing and reducing verbose, repetitive, promotional, and speculative interface copy while preserving useful guidance, safety, recovery, and accessibility.
 
 ## Install
 
@@ -22,7 +22,6 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 | Previous | Decision | Output |
 | --- | --- | --- |
-| Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |
 | The document could not be saved. | Rewrite | Failed to save. |
 | Your backup was successfully created and is now safely stored. | Shorten | Backup created. |

@@ -1,4 +1,3 @@
 interface:
   display_name: "Reducing UI Copy Slop"
-  short_description: "Remove bloated and repetitive interface copy"
-  default_prompt: "Use $reducing-ui-copy-slop to review or edit this product UI copy and keep only necessary text."
+  short_description: "Review bloated and repetitive interface copy"
