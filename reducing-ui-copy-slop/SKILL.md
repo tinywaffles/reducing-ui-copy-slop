@@ -36,6 +36,7 @@ Delete reassurance, implementation boundaries, unaffected-surface notes, and abs
 | Element | Rule |
 | --- | --- |
 | Button | Name the outcome. Add the object only for context or precise confirmation. |
+| Input | Keep its label or accessible name. An existing placeholder or hint may be shortened or rewritten, not deleted; preserve the expected content or format. |
 | Helper | Keep only a constraint, consequence, format, trigger, or useful example not carried by the label, value, control, or state. |
 | Success | State the outcome once. Cut reassurance and internal claims such as “safely stored”; keep needed safety facts. |
 | Error | Delete failure already stated nearby. Otherwise state what failed naturally. Keep a code only when it helps the user, support, or recovery; never make it the primary message. Add only a known useful cause or existing recovery. |
