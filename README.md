@@ -22,11 +22,11 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 | Previous | Decision | Output |
 | --- | --- | --- |
-| Environmental convergence complete. | Delete | — |
-| A setup task is already running. Wait for it to finish before starting another one. | Shorten | A setup task is already running. |
-| Settings Synchronized | Rewrite | Settings saved |
-| This action is permanent and cannot be undone. | Rewrite | This permanently deletes the snapshot. |
-| Enter exact Minecraft username... | Rewrite | Exact Minecraft username |
+| Please wait while we load your settings. | Rewrite | Loading settings… |
+| Your settings were successfully saved. | Shorten | Settings saved. |
+| A task is already running. Wait for it to finish before starting another one. | Shorten | A task is already running. |
+| Enter exact username... | Shorten | Enter username |
+| Deleting this file is permanent and cannot be undone. | Rewrite | This permanently deletes the file. |
 | The document could not be saved. | Rewrite | Failed to save. |
 
 ## License
