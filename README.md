@@ -22,12 +22,13 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 | Previous | Decision | Output |
 | --- | --- | --- |
-| Please wait while we load your settings. | Rewrite | Loading settings… |
-| Your settings were successfully saved. | Shorten | Settings saved. |
-| A task is already running. Wait for it to finish before starting another one. | Shorten | A task is already running. |
-| Enter exact username... | Shorten | Enter username |
-| Deleting this file is permanent and cannot be undone. | Rewrite | This permanently deletes the file. |
-| The document could not be saved. | Rewrite | Failed to save. |
+| Initializing environment variables for your personalized workspace... | Rewrite | Preparing environment… |
+| Please wait while we securely establish your connection. | Rewrite | Connecting… |
+| Your profile settings have been successfully updated. | Shorten | Profile settings updated. |
+| An unexpected error occurred while attempting to process your request. | Rewrite | Request failed. |
+| A task is currently in progress. Please wait patiently for it to complete before starting another one. | Rewrite | A task is already running. |
+| Please enter your exact username in the field below... | Shorten | Enter username |
+| Deleting this file is a permanent action that cannot be undone. | Rewrite | This permanently deletes the file. |
 
 ## License
 
