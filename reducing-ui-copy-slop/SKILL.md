@@ -8,7 +8,7 @@ license: MIT
 
 ## Rule
 
-Use the shortest wording that keeps meaning. Use one term per concept. Treat layout, labels, values, controls, state, and nearby text as context. Keep domain terms unless redundant. Ignore punctuation-only edits unless asked. Cover required elements; invent none.
+Use the shortest wording that keeps meaning. Prefer concrete states and outcomes to narration. Keep labels grammatical with their values and use one term per concept. Treat layout, controls, state, and nearby copy as context. Keep domain terms unless redundant. Ignore punctuation-only edits unless asked. Invent nothing.
 
 ## Scope
 
@@ -39,7 +39,7 @@ In docs examples, cut setup or reasons that only justify **Delete** or **Shorten
 | Error | Delete failure already stated nearby. Otherwise state what failed naturally. Keep a code only when it helps the user, support, or recovery; never make it the primary message. Add only a known useful cause or existing recovery. |
 | Empty state | State the condition. Add a known reason or existing action only if useful. |
 | Destructive action | Name the object and keep the irreversible consequence. |
-| Disabled control | Keep an existing availability reason when needed. |
+| Disabled control | State why it is unavailable. Add no instruction when the user cannot act. |
 | Link or icon-only control | Use an accessible name that makes sense without nearby copy. |
 
 ## Example
