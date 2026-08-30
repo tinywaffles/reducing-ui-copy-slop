@@ -22,13 +22,12 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 | Previous | Decision | Output |
 | --- | --- | --- |
-| Create a new backup now | Shorten | Create backup |
+| Environmental convergence complete. | Delete | — |
+| A setup task is already running. Wait for it to finish before starting another one. | Shorten | A setup task is already running. |
+| Settings Synchronized | Rewrite | Settings saved |
+| This action is permanent and cannot be undone. | Rewrite | This permanently deletes the snapshot. |
+| Enter exact Minecraft username... | Rewrite | Exact Minecraft username |
 | The document could not be saved. | Rewrite | Failed to save. |
-| Your backup was successfully created and is now safely stored. | Shorten | Backup created. |
-
-## Design basis
-
-Built to the [Agent Skills specification](https://agentskills.io/specification), [OpenAI](https://learn.chatgpt.com/docs/build-skills), and [Anthropic](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) authoring guidance. Copy rules adapt Apple’s [Writing](https://developer.apple.com/design/human-interface-guidelines/writing), Impeccable’s [Clarify](https://github.com/pbakaus/impeccable/blob/main/skill/reference/clarify.md) and [Distill](https://github.com/pbakaus/impeccable/blob/main/skill/reference/distill.md), and Hallmark’s [copy guidance](https://github.com/Nutlope/hallmark/blob/main/skills/hallmark/references/copy.md) for product UI.
 
 ## License
 
