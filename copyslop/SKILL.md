@@ -1,10 +1,10 @@
 ---
-name: reducing-ui-copy-slop
+name: copyslop
 description: Use when reviewing or editing product UI copy that may be verbose, repetitive, promotional, vague, speculative, reassuring, or misleading, including labels, helpers, controls, dialogs, empty states, errors, success messages, and documentation examples; not marketing, visual design, or unrelated prose.
 license: MIT
 ---
 
-# Reducing UI Copy Slop
+# Copyslop
 
 ## Rule
 
