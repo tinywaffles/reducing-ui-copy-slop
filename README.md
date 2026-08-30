@@ -20,7 +20,7 @@ Remove `--scope user` to install into the current project. For a manual install,
 
 ## Example
 
-| Example | What | Result |
+| Previous | Decision | Output |
 | --- | --- | --- |
 | Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |

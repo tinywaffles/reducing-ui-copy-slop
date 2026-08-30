@@ -16,18 +16,20 @@ Read the brief, component, interaction, and nearby copy. Separate facts from ass
 
 Do not invent controls, states, metrics, progress, guarantees, confirmations, tooltips, or behavior. Verify specific claims. List `Open product facts` only when needed for accurate copy.
 
+For broad audits, work one surface at a time. Do not sample "top" findings or claim full coverage without reading every included surface. If the problem is state, timing, interaction, or rendering rather than wording, leave it out of the copy audit.
+
 ## Decide
 
 Each string must identify an object or state, or communicate an outcome, constraint, consequence, recovery, instruction, or accessible name.
 
-- **Delete** if it has no unique job or repeats nearby copy.
+- **Delete** first if it has no unique job or repeats nearby copy.
 - **Shorten** by deleting padding.
 - **Rewrite** unclear or misleading copy using verified facts only.
 - **Keep** if removal harms understanding, recovery, safety, or accessibility.
 
 Before changing a helper, identify its unique facts. Move its only attribute into a natural label. Otherwise keep those facts. Never rename a clear label just to delete a brief helper. Replace implementation terms with user-facing categories; drop provenance and implied qualities, but keep material qualifiers. Use accurate plain verbs.
 
-Audit changed copy only. Each finding has original copy, decision, and result; add location only when identical strings differ. Adapt labels to the task. Omit preambles, summaries, and routine reasons. Apply requested edits.
+Report only copy that changes. Use `Previous`, `Decision`, and `Output`. Add `Location` only when identical `Previous` text needs a different decision or output. Put one string in each row. `Previous` and `Output` contain only the exact UI text in question, including placeholders when needed; put no context, explanation, or rationale in either. `Decision` contains only **Delete**, **Shorten**, or **Rewrite**; include **Keep** only when requested. Use `—` for deleted output. Omit preambles, summaries, priorities, and routine reasons. Apply requested edits.
 
 Delete reassurance, implementation boundaries, unaffected-surface notes, and absent-control explanations unless needed for a decision, safety, recovery, or action. Absence alone needs no explanation. In docs examples, cut setup or reasons that only justify **Delete** or **Shorten**. Keep needed context; keep agent reasoning out of UI copy.
 
@@ -47,7 +49,7 @@ Delete reassurance, implementation boundaries, unaffected-surface notes, and abs
 
 ## Example
 
-| Example | Type | Result |
+| Previous | Decision | Output |
 | --- | --- | --- |
 | Safeguard your precious worlds effortlessly with powerful automated backup protection. | Delete | — |
 | Create a new backup now | Shorten | Create backup |
