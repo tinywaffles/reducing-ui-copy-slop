@@ -18,6 +18,11 @@ Verify claims. If missing product facts prevent accurate copy, return only `Open
 
 Audit only requested surfaces, one at a time. Do not infer findings from uninspected copy. Leave state, timing, interaction, and rendering problems out of the copy report.
 
+## Phases
+
+1. **Audit:** Always read-only. Inspect the requested surface and return proposed copy changes. Change no files, even when the initial request asks for edits.
+2. **Decision:** Stop for approval, rejection, or feedback. Approval applies only the approved rows; edit and verify them. Rejection changes nothing. Feedback revises the proposal and remains read-only until fresh approval. Partial approval applies only named rows.
+
 ## Decide
 
 - **Delete** if it has no user-facing job or repeats nearby copy.
@@ -27,7 +32,7 @@ Audit only requested surfaces, one at a time. Do not infer findings from uninspe
 
 Before changing a helper, find facts absent nearby. Move its sole fact into a natural label only if clarity remains; otherwise keep it. Do not rename a clear label just to remove a helper. Replace internal terms with user-facing categories only when the object and scope stay the same. Drop provenance and implied qualities; keep material qualifiers. Use plain verbs.
 
-Return only a `Previous | Decision | Output` table of changed strings. Add `Location` only when identical `Previous` strings need different results. Each row contains one string; `Previous` and `Output` contain exact UI text only. `Decision` is **Delete**, **Shorten**, or **Rewrite**; include **Keep** only when asked. Use `—` for deletion. Add no ranking or rationale. If nothing changes, return `No copy changes.` A read-only audit changes no files; otherwise apply only requested edits.
+In Phase 1, return only a `Previous | Decision | Output` table of changed strings. Add `Location` only when identical `Previous` strings need different results. Each row contains one string; `Previous` and `Output` contain exact UI text only. `Decision` is **Delete**, **Shorten**, or **Rewrite**; include **Keep** only when asked. Use `—` for deletion. Add no ranking or rationale. If nothing changes, return `No copy changes.`
 
 Remove reassurance, implementation details, unaffected-surface notes, and absent-control explanations only when they have no user-facing job. Keep boundary copy needed to understand or act on security, privacy, permissions, data flow, limits, consequences, recovery, or safety. Copy edits never change behavior or weaken a boundary. Absence needs no explanation. Keep agent reasoning out of UI copy.
 
