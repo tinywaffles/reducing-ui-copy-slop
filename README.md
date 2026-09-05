@@ -18,17 +18,27 @@ gh skill install tinywaffles/reducing-ui-copy-slop copyslop --agent claude-code 
 
 Remove `--scope user` to install into the current project. For a manual install, copy `copyslop/` into `~/.agents/skills/` for Codex or `~/.claude/skills/` for Claude Code.
 
-## Example
+Invoke `$copyslop` in Codex or `/copyslop` in Claude Code. Both use the same skill instructions.
 
-| Previous | Decision | Output |
-| --- | --- | --- |
-| Initializing environment variables for your personalized workspace... | Rewrite | Preparing environment… |
-| Please wait while we securely establish your connection. | Rewrite | Connecting… |
-| Your profile settings have been successfully updated. | Shorten | Profile settings updated. |
-| An unexpected error occurred while attempting to process your request. | Rewrite | Request failed. |
-| A task is currently in progress. Please wait patiently for it to complete before starting another one. | Rewrite | A task is already running. |
-| Please enter your exact username in the field below... | Shorten | Enter username |
-| Deleting this file is a permanent action that cannot be undone. | Rewrite | This permanently deletes the file. |
+### Claude chat
+
+Download [copyslop.zip](copyslop.zip). In Claude, open **Customize > Skills**, select **+ > Create skill > Upload a skill**, upload the ZIP, and enable it. See [Claude's upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+The ZIP contains `copyslop/SKILL.md`, Codex UI metadata, and the MIT license. Supply the relevant copy and nearby interaction context in chat; missing product facts remain open questions. Claude chat cannot inspect a local repository unless you provide access or its relevant contents.
+
+To rebuild the ZIP from the repository root with PowerShell:
+
+```powershell
+Compress-Archive -LiteralPath ./copyslop -DestinationPath ./copyslop.zip -Force
+```
+
+## Review and approval
+
+The first pass is read-only and returns a `Previous | Decision | Output` table. Approve all changes or identify the rows to apply; rejection changes nothing, and feedback stays read-only until fresh approval. `Location` identifies ambiguous occurrences. Matching `Group` values identify changes that must be approved together, such as moving a helper's fact into its label.
+
+Missing facts appear under `Open product facts` while independent proposals remain available. `No copy changes.` means the requested audit found neither changes nor unresolved facts.
+
+See the [contextual examples](copyslop/SKILL.md#examples) and [regression checks](TESTS.md).
 
 ## License
 
