@@ -10,7 +10,7 @@ Agent skill for identifying and reducing unnecessary AI-generated UI copy slop.
 | Your backup has been successfully created. | Backup created. | Shorten |
 | Are you sure you want to permanently delete this backup? | Permanently delete this backup? | Shorten |
 | Enjoy a seamless and intuitive experience designed to make every interaction feel effortless. Our thoughtfully crafted interface puts you in complete control, giving you the confidence to focus on what matters most while we take care of the details behind the scenes. | — | Delete |
-| Our intelligent backup management system works tirelessly behind the scenes to keep your storage clean and organized, so you never have to worry about unnecessary clutter. Backups older than 30 days are automatically and permanently deleted, while your most recent backup is always kept to give you confidence and peace of mind. | Backups older than 30 days are automatically deleted, except the latest backup. Deletion is permanent. | Rewrite |
+| Our intelligent backup management system works tirelessly behind the scenes to keep your storage clean and organized, so you never have to worry about unnecessary clutter. Backups older than 30 days are automatically and permanently deleted, while your most recent backup is always kept to give you confidence and peace of mind. | Backups older than 30 days are automatically and permanently deleted, except the latest backup. | Rewrite |
 
 ## Install
 
