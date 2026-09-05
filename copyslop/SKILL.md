@@ -53,20 +53,6 @@ Remove reassurance, provenance, implied qualities, implementation details, unaff
 | Disabled control | State why it is unavailable. Add no instruction when the user cannot act. |
 | Link or icon-only control | Use an accessible name that makes sense without nearby copy. |
 
-## Examples
-
-Context and **Keep** rows are shown here for illustration; they do not change the audit format above.
-
-| Context | Previous | Decision | Output |
-| --- | --- | --- | --- |
-| Button creates one backup. | Create a new backup | Shorten | Create backup |
-| Standalone notification; no nearby object name. | The document could not be saved. | Keep | The document could not be saved. |
-| Control changes font size. | Text Size | Keep | Text Size |
-| Control changes animation speed. | Motion Speed | Keep | Motion Speed |
-| Only indicator of pending edits. | Unsaved | Keep | Unsaved |
-| Prompt inside an API key field. | Paste API key | Keep | Paste API key |
-| Browser and desktop access have separate controls. | This setting only affects browser access. | Shorten | Only affects browser access. |
-
 ## Check
 
 Compare source and result against the Rule. Preserve interpolation tokens, formatting placeholders, translation keys, and plural/select branches; edit only their user-facing text. Check affected callers, dynamic values, accessible names, and rendered width when available; report source-only verification when live checks are unavailable. Confirm the diff stays within the authorized scope, applies only approved rows when an audit was used, keeps linked changes complete, and leaves unresolved strings unchanged.
