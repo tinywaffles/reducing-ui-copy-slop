@@ -20,8 +20,10 @@ Audit only requested surfaces, one at a time. Do not infer findings from uninspe
 
 ## Phases
 
-1. **Audit:** Always read-only. Inspect the requested surface and return proposed copy changes. Change no files, even when the initial request asks for edits.
-2. **Decision:** Stop for approval, rejection, or feedback. Edit and verify only approved rows at their identified locations. Rejection changes nothing. Feedback revises the proposal and remains read-only until fresh approval. Partial approval applies only named rows; ambiguous approval needs clarification. Apply a linked group only when every row in it is approved. Hold an incomplete group, explain which approval is missing, and continue with independent approved rows. Recheck the source before editing; changed meaning or context requires a revised proposal.
+1. **Audit:** Default to a read-only audit and show proposed changes. Edit only after approval, unless the user explicitly asks to skip the audit and make changes directly.
+2. **Decision:** After an audit, stop for approval, rejection, or feedback. Edit and verify only approved rows at their identified locations. Rejection changes nothing. Feedback revises the proposal and remains read-only until fresh approval. Partial approval applies only named rows; ambiguous approval needs clarification. Apply a linked group only when every row in it is approved. Hold an incomplete group, explain which approval is missing, and continue with independent approved rows. Recheck the source before editing; changed meaning or context requires a revised proposal.
+
+Direct edits still require inspection and verification. Keep the requested scope, apply linked changes together, and leave strings with unresolved facts unchanged.
 
 ## Decide
 
@@ -30,7 +32,7 @@ Audit only requested surfaces, one at a time. Do not infer findings from uninspe
 - **Rewrite** unclear or misleading copy using verified facts only.
 - **Keep** if removal harms understanding, recovery, safety, or accessibility.
 
-Before changing a helper, find facts absent nearby. Move its sole fact into a natural label only if clarity remains; otherwise keep it. Link that label change and helper deletion as one approval group. Do not rename a clear label just to remove a helper. Replace internal terms with user-facing categories only when the object and scope stay the same. Use plain verbs.
+Before changing a helper, find facts absent nearby. Move its sole fact into a natural label only if clarity remains; otherwise keep it. Keep that label change and helper deletion together; in an audit, give them one approval group. Do not rename a clear label just to remove a helper. Replace internal terms with user-facing categories only when the object and scope stay the same. Use plain verbs.
 
 In Phase 1, return a `Previous | Decision | Output` table of verified changes. Add `Location` whenever needed to identify affected occurrences, even when identical strings get the same replacement. Add `Group` only for linked changes; matching group values mean the rows must be approved together. Each row contains one string; `Previous` and `Output` contain exact UI text only. Use `—` for deletion. Omit unchanged rows unless **Keep** is requested. Add no ranking or rationale. The only extra section is `Open product facts` when needed. With no proposed changes and no blockers, return `No copy changes.` With only blockers, return only `Open product facts`.
 
@@ -67,4 +69,4 @@ Context and **Keep** rows are shown here for illustration; they do not change th
 
 ## Check
 
-Compare approved source and result against the Rule. Preserve interpolation tokens, formatting placeholders, translation keys, and plural/select branches; edit only their user-facing text. Check affected callers, dynamic values, accessible names, and rendered width when available; report source-only verification when live checks are unavailable. Confirm the diff contains only approved changes, linked groups are complete, and unresolved strings remain unchanged.
+Compare source and result against the Rule. Preserve interpolation tokens, formatting placeholders, translation keys, and plural/select branches; edit only their user-facing text. Check affected callers, dynamic values, accessible names, and rendered width when available; report source-only verification when live checks are unavailable. Confirm the diff stays within the authorized scope, applies only approved rows when an audit was used, keeps linked changes complete, and leaves unresolved strings unchanged.

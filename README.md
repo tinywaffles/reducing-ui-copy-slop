@@ -1,6 +1,6 @@
 # Copyslop
 
-Copyslop is an Agent Skill for reviewing and reducing verbose, repetitive, promotional, and speculative interface copy while preserving useful guidance, safety, recovery, and accessibility.
+Copyslop reviews interface copy and proposes clearer wording while preserving meaning, safety, recovery, and accessibility.
 
 ## Install
 
@@ -18,13 +18,13 @@ gh skill install tinywaffles/reducing-ui-copy-slop copyslop --agent claude-code 
 
 Remove `--scope user` to install into the current project. For a manual install, copy `copyslop/` into `~/.agents/skills/` for Codex or `~/.claude/skills/` for Claude Code.
 
-Invoke `$copyslop` in Codex or `/copyslop` in Claude Code. Both use the same skill instructions.
+Invoke `$copyslop` in Codex or `/copyslop` in Claude Code.
 
 ### Claude chat
 
-Download [copyslop.zip](copyslop.zip). In Claude, open **Customize > Skills**, select **+ > Create skill > Upload a skill**, upload the ZIP, and enable it. See [Claude's upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+Download the [Claude ZIP](https://github.com/tinywaffles/reducing-ui-copy-slop/releases/download/v1.0.1/copyslop.zip). In Claude, open **Customize > Skills**, select **+ > Create skill > Upload a skill**, upload the ZIP, and enable it. See [Claude's upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
-The ZIP contains `copyslop/SKILL.md`, Codex UI metadata, and the MIT license. Supply the relevant copy and nearby interaction context in chat; missing product facts remain open questions. Claude chat cannot inspect a local repository unless you provide access or its relevant contents.
+Share the relevant copy in chat and explain how the surrounding interface works. Claude chat cannot inspect a local repository unless you provide access or its relevant contents.
 
 To rebuild the ZIP from the repository root with PowerShell:
 
@@ -34,9 +34,11 @@ Compress-Archive -LiteralPath ./copyslop -DestinationPath ./copyslop.zip -Force
 
 ## Review and approval
 
-The first pass is read-only and returns a `Previous | Decision | Output` table. Approve all changes or identify the rows to apply; rejection changes nothing, and feedback stays read-only until fresh approval. `Location` identifies ambiguous occurrences. Matching `Group` values identify changes that must be approved together, such as moving a helper's fact into its label.
+By default, the skill returns a read-only `Previous | Decision | Output` review. To edit directly, explicitly ask it to skip the audit and make changes.
 
-Missing facts appear under `Open product facts` while independent proposals remain available. `No copy changes.` means the requested audit found neither changes nor unresolved facts.
+After a review, approve all changes or identify the rows to apply; rejection changes nothing, and feedback stays read-only until fresh approval. `Location` identifies ambiguous occurrences. Rows with the same `Group` must be approved together.
+
+Questions appear under `Open product facts`; other proposals can still be approved. `No copy changes.` means there are no proposed edits or unanswered product questions.
 
 See the [contextual examples](copyslop/SKILL.md#examples) and [regression checks](TESTS.md).
 
