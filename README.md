@@ -1,14 +1,16 @@
 # Copyslop
 
-Cut unnecessary words from UI copy.
+Agent skill for identifying and reducing unnecessary AI-generated UI copy slop.
 
 ## Examples
 
-| Before | After |
-| --- | --- |
-| Create a new backup | Create backup |
-| Your backup has been successfully created. | Backup created. |
-| Are you sure you want to permanently delete this backup? | Permanently delete this backup? |
+| Before | After | Decision |
+| --- | --- | --- |
+| Create a new backup | Create backup | Shorten |
+| Your backup has been successfully created. | Backup created. | Shorten |
+| Are you sure you want to permanently delete this backup? | Permanently delete this backup? | Shorten |
+| Enjoy a seamless and intuitive experience designed to make every interaction feel effortless. Our thoughtfully crafted interface puts you in complete control, giving you the confidence to focus on what matters most while we take care of the details behind the scenes. | — | Delete |
+| Our intelligent backup management system works tirelessly behind the scenes to keep your storage clean and organized, so you never have to worry about unnecessary clutter. Backups older than 30 days are automatically and permanently deleted, while your most recent backup is always kept to give you confidence and peace of mind. | Backups older than 30 days are automatically deleted, except the latest backup. Deletion is permanent. | Rewrite |
 
 ## Install
 
@@ -40,19 +42,9 @@ Invoke `$copyslop` in Codex or `/copyslop` in Claude Code.
 
 Download the [Claude ZIP](https://github.com/tinywaffles/Copyslop-skill/releases/download/v1.0.1/copyslop.zip). In Claude, open **Customize > Skills**, select **+ > Create skill > Upload a skill**, upload the ZIP, and enable it. See [Claude's upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
-Share the relevant copy in chat and explain how the surrounding interface works. Claude chat cannot inspect a local repository unless you provide access or its relevant contents.
-
-To rebuild the ZIP from the repository root with PowerShell:
-
-```powershell
-Compress-Archive -LiteralPath ./copyslop -DestinationPath ./copyslop.zip -Force
-```
-
-## Review and approval
+## Usage
 
 By default, the skill returns a read-only `Previous | Decision | Output` review. To edit directly, explicitly ask it to skip the audit and make changes.
-
-After a review, approve all changes or identify the rows to apply; rejection changes nothing, and feedback stays read-only until fresh approval. `Location` identifies ambiguous occurrences. Rows with the same `Group` must be approved together.
 
 ## License
 
